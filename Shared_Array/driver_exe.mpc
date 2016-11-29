@@ -1,0 +1,13 @@
+// shared_exe.mpc    
+project (driver_exe) {	
+	exename = driver_exe    	
+	install = .          	
+	
+	libs  += array_lib    	
+	after += array_lib    	
+	
+	Source_Files {						
+		driver.cpp
+	}
+}
+

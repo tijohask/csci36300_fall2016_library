@@ -1,0 +1,16 @@
+// array_lib.mpc
+
+project (array_lib) {
+	// Declare project as a shared library
+	sharedname = array_lib
+	
+	dynamicflags += ARRAY_LIB
+	
+	dllout = .
+	
+	libout = .
+	
+	Source_Files{
+		Array.cpp
+	}
+}
