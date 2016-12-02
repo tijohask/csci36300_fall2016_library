@@ -1,0 +1,12 @@
+#!/bin/bash
+
+mpc.pl -type make array_lib.mpc
+make -f Makefile.array_lib
+
+mpc.pl -type make driver_exe.mpc
+make -f Makefile.driver_exe
+
+#echo $PWD
+LD_LIBRARY_PATH=$LD_LIBRARY_PATH:"$PWD"
+
+export LD_LIBRARY_PATH
