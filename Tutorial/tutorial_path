@@ -1,0 +1,12 @@
+#!/bin/bash
+
+mpc.pl -type make shared_lib.mpc
+make -f Makefile.my_shared_lib
+
+mpc.pl -type make shared_exe.mpc
+make -f Makefile.shared_exe
+
+#echo $PWD
+LD_LIBRARY_PATH=$LD_LIBRARY_PATH:"$PWD"
+
+export LD_LIBRARY_PATH
