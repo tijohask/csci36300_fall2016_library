@@ -13,6 +13,8 @@
  *
  * Basic implementation of a standard array class for chars.
  */
+ 
+ // Ryan: Please remove old feedback.
 
 /// Default constructor.
 Array::Array (): data_(NULL), cur_size_(0), max_size_(0)
