@@ -1,3 +1,4 @@
+// Ryan: Please include the honor pledge in each file.
 // array_lib.mpc
 
 project (array_lib) {

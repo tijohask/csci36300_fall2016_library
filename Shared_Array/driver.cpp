@@ -1,3 +1,5 @@
+// Ryan: Please include the honor pledge in each file.
+
 #include "Array.h"
 #include <stdexcept>
 #include <iostream>
@@ -10,6 +12,7 @@ void test_booleans();
 void test_out_of_bounds();
 void test_size();
 
+// Ryan: Please include comments in each file.
 int main()
 {
 	std::cout << "Begin Testing" << std::endl;

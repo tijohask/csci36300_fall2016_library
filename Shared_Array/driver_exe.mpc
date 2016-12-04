@@ -1,3 +1,5 @@
+// Ryan: Please include the honor pledge in each file.
+
 // shared_exe.mpc    
 project (driver_exe) {	
 	exename = driver_exe    	
