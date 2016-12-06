@@ -1,5 +1,10 @@
-// Ryan: Please include the honor pledge in each file.
+// Honor Pledge:
+//
+// I pledge that I have neither given nor receieved any help
+// on this assignment.
 
+// Ryan: Please include the honor pledge in each file.
+// FIXED: Included honor pledge
 #include "Array.h"
 #include <stdexcept>
 #include <iostream>
@@ -13,20 +18,22 @@ void test_out_of_bounds();
 void test_size();
 
 // Ryan: Please include comments in each file.
+// FIXED: Added comments
 int main()
 {
 	std::cout << "Begin Testing" << std::endl;
  
-	test_constructors();
-	test_set_and_get();
-	test_fill();
-	test_size();
-	test_booleans();
-	test_out_of_bounds();	
+	test_constructors();	//test constructors
+	test_set_and_get();		//test sets and gets
+	test_fill();			//test fill
+	test_size();			//test size and resize
+	test_booleans();		//test booleans
+	test_out_of_bounds();	//test error checking
 
 	std::cout << "Done" << std::endl;
 }
 
+// method to test sizes and resizes
 void test_size()
 {
 	std::cout << "Testing sizes" << std::endl;
@@ -80,6 +87,7 @@ void test_size()
 	std::cout << "Sizes Tested" << std::endl;
 }
 
+// method to test constructors
 void test_constructors()
 {
 	std::cout << "Testing constructors" << std::endl;
@@ -95,9 +103,10 @@ void test_constructors()
 	print_out(arr3);
 	print_out(arr4);
 
-	std::cout << "Testing constructors" << std::endl;
+	std::cout << "Constructors Tested" << std::endl;
 }
 
+// method to test sets and gets
 void test_set_and_get()
 {
 	std::cout << "Testing sets and gets" << std::endl;
@@ -119,6 +128,7 @@ void test_set_and_get()
 	std::cout << "Sets and gets tested" << std::endl;
 }
 
+// method to test fill method
 void test_fill()
 {
 	std::cout << "Testing fill" << std::endl;
@@ -133,6 +143,7 @@ void test_fill()
 	std::cout << "Fill Tested" << std::endl;
 }
 
+// method to test booleans
 void test_booleans()
 {
 	std::cout << "Testing booleans" << std::endl;
@@ -182,6 +193,7 @@ void test_booleans()
 	std::cout << "Booleans tested" << std::endl;
 }
 
+// method to test out of bounds exceptions
 void test_out_of_bounds()
 {
 	Array arr3 (9, 'b');
@@ -211,6 +223,7 @@ void test_out_of_bounds()
 	}
 }
 
+// print out the contents of the array
 void print_out(Array arr)
 {
 	std::cout << "\"";
