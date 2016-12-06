@@ -1,5 +1,12 @@
-// Ryan: Please include the honor pledge in each file.
 // array_lib.mpc
+
+// Honor Pledge:
+//
+// I pledge that I have neither given nor receieved any help
+// on this assignment.
+
+// Ryan: Please include the honor pledge in each file.
+// FIXED: Included honor pledge
 
 project (array_lib) {
 	// Declare project as a shared library

@@ -1,5 +1,3 @@
-// $Id: Array.cpp 820 2011-01-17 15:30:41Z hillj $
-
 // Honor Pledge:
 //
 // I pledge that I have neither given nor receieved any help
@@ -15,7 +13,8 @@
  */
  
  // Ryan: Please remove old feedback.
-
+ // FIXED: Removed old feedback.
+ 
 /// Default constructor.
 Array::Array (): data_(NULL), cur_size_(0), max_size_(0)
 {
@@ -28,8 +27,6 @@ Array::Array (): data_(NULL), cur_size_(0), max_size_(0)
 //Takes in a length
 Array::Array (size_t length): data_(NULL), cur_size_(length), max_size_(length)
 {
-	// Ryan: Ensure length is not 0 here.
-	// Fix: Added if statement to make sure length is greater than 0
 	if(length > 0)
 	{
 		data_ = new char[length];
@@ -43,8 +40,6 @@ Array::Array (size_t length): data_(NULL), cur_size_(length), max_size_(length)
 //Takes in a length, and a character to fill in the array with
 Array::Array (size_t length, char fill): data_(NULL), cur_size_(length), max_size_ (length)
 {
-	// Ryan: Ensure length is not 0 here.
-	// Fix: Added if statement to make sure length is greater than 0
 	if(length > 0)
 	{
 		data_ = new char[length];//create a new array
@@ -58,9 +53,6 @@ Array::Array (size_t length, char fill): data_(NULL), cur_size_(length), max_siz
 //Takes in another array object
 Array::Array (const Array & array): data_(NULL), cur_size_(array.size()), max_size_(array.max_size())
 {
-	// Ryan: Make sure that we are not allocating an array of size 0.
-	// Fix: Added if statement to make sure we are not allocating an 
-	// array of size 0
 	if(max_size_ > 0)
 	{
 		data_ = new char[max_size_];//create a new character array
@@ -74,8 +66,6 @@ Array::Array (const Array & array): data_(NULL), cur_size_(array.size()), max_si
 /// Destructor
 Array::~Array (void)
 {
-	// Ryan: Check to make sure this is not NULL.
-	// Fix: Added if statement to make sure data is not NULL
 	if(data_ != NULL)
 	{//make sure the data is pointing to something
 		delete [] data_;
@@ -87,9 +77,6 @@ Array::~Array (void)
  */
 const Array & Array::operator = (const Array & rhs)
 {
-	// Ryan: Check for self-assignment first.
-	// Fix: Added if statement to check for self assignment
-
 	//(this != &rhs) compares the addresses. 
 	//If the object is being assigned to itself, its caught and nothing happens
 	
@@ -237,8 +224,6 @@ void Array::resize (size_t new_size)
  */
 int Array::find (char ch) const
 {
-	// Ryan: Why don't you use the other find function here - code reuse.
-	// Fix: using other function as advised.
 	return this->find(ch, 0);
 }
 
@@ -269,9 +254,6 @@ int Array::find (char ch, size_t start) const
  */
 bool Array::operator == (const Array & rhs) const
 {
-	// Ryan: Perform a self-comparison check first.
-	// Fix: Added pointer comparison
-
 	if(this == &rhs)
 	{//Pointer comparison
 		return true;
@@ -301,10 +283,6 @@ bool Array::operator == (const Array & rhs) const
  */
 bool Array::operator != (const Array & rhs) const
 {
-	// Ryan: Why don't you just use the above function to achieve this - code reuse.
-	// Fix: using the above function as advised.
-	//if the arrays have different sizes, they are not equal
-
 	return !(*this == rhs);
 }
 
